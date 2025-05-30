@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Animated Online Education Website Design Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- header section starts -->
+
+    <header id="header">
+
+    <a href="#" class="logo"><img src="images/logo.jpg" alt=""></a>
+
+    <nav>
+        <ul>    
+            <li><a href="#home">Home</a></li>
+            <li><a href="#course">Courses</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+     <div class="fas fa-bars"></div>
+
+    </header>
+    <!-- header section ends -->
+
+
+<!-- home section starts -->
+
+<section id="home" class="container-fluid">
+
+    <div class="row align-items-center min-vh-100 content">
+
+        <div class="col-md-8 ml-md-5 text-center text-md-left">
+            
+            <h1>online</h1>
+            <h2>Education </h2>
+            <h3>learn online from home</h3>
+
+            <a href="#course"><button> enroll now >></button></a>
+
+            <div class="icons">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- home section ends -->
+
+<!-- course section starts -->
+
+<section id="course">
+
+<h1 class="heading">our latest courses</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="images/icon1.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quis molestiae impedit officiis. Quidem suscipit necessitatibus facere, deleniti iste, possimus ut aut, ipsum esse nesciunt quibusdam eos veniam earum nam?</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon2.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quis molestiae impedit officiis. Quidem suscipit necessitatibus facere, deleniti iste, possimus ut aut, ipsum esse nesciunt quibusdam eos veniam earum nam?</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon3.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quis molestiae impedit officiis. Quidem suscipit necessitatibus facere, deleniti iste, possimus ut aut, ipsum esse nesciunt quibusdam eos veniam earum nam?</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon4.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quis molestiae impedit officiis. Quidem suscipit necessitatibus facere, deleniti iste, possimus ut aut, ipsum esse nesciunt quibusdam eos veniam earum nam?</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon5.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quis molestiae impedit officiis. Quidem suscipit necessitatibus facere, deleniti iste, possimus ut aut, ipsum esse nesciunt quibusdam eos veniam earum nam?</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon6.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quis molestiae impedit officiis. Quidem suscipit necessitatibus facere, deleniti iste, possimus ut aut, ipsum esse nesciunt quibusdam eos veniam earum nam?</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- course section ends -->
+
+
+
+
+
+
+
+
+
+    <!-- script part start -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $('.fa-bars').click(function(){
+            $(this).toggleClass('fa-times');
+            $('nav').toggleClass('nav-toggle');
+        });
+
+        $(window).on('load scroll',function(){
+
+    if($(window).scrollTop() > 0){
+
+        $('#header').css('top','0');
+        
+        $('.fa-bars').removeClass('fa-times');
+        $('nav').removeClass('nav-toggle');
+
+    }else{
+        $('#header').css('top','0');
+         }
+       }
+     );
+
+    });
+
+</script>
+
+<!-- script part start ends-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+$green: #00B894;
+
+@mixin heading {
+    font-size: 4rem;
+    padding-top: 5rem;
+    margin:2rem 0;
+    color:#fff;
+    text-align: center;
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      left:50%;
+      transform: translateX(-50%);
+      height:.3rem;
+      width:60%;
+      border-radius: 5rem;
+      background: #333;
+
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: 'Exo 2', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    height:2000px;
+}
+
+#header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: -100%; left: 0;
+    padding:1rem 4rem;
+    background: #fff;
+    box-shadow: 0 .1rem .3rem #999;
+    z-index: 1100;
+
+    .logo{
+        img{
+            height:3.5rem;
+        }
+    }
+    
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            margin-bottom: 0;
+
+            li{
+                margin-right: 2rem;
+
+                a{
+                    color:#333;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    
+                    &:hover{
+                        
+                        color:$green;
+                    }
+                }
+            }
+        }
+    }
+
+    .fa-bars{
+        font-size: 3rem;
+        color: #333;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+//home section
+
+#home{
+    min-height:100vh;
+    width:100vw;
+    background:linear-gradient(76.35deg, #FFFFFF 52.45%, rgba(196, 196, 196, 0) 52.49%), url(../images/back1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: background 10s alternate infinite;
+
+    .content{
+      position: relative;
+
+      h1{
+        font-size: 6rem;
+        color:$green;
+      }
+
+      h2{
+        font-size: 5rem;
+        color: $green;
+      }
+
+      h3{
+        font-size: 3rem;
+        color: #333;
+        margin:1rem 0;
+      }
+      
+      button{
+        outline: none;
+        border: none;
+        border-radius: 5rem;
+        background: $green;
+        color: #fff;
+        cursor: pointer;
+        height:4rem;
+        width:18rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+
+        &:hover{
+          background: #333;
+
+        }
+      }
+      .icons{
+        position: absolute;
+        left:2rem; bottom: -65%;
+        width: 100%;
+
+        a{
+          height:4rem;
+          width:4rem;
+          line-height: 4rem;
+          text-align: center;
+          background: $green; 
+          border-radius: 5rem;
+          font-size: 1.7rem;
+          color: $fff;
+          margin-right: 1.5rem;
+          transition: .4s;
+
+          &:hover{
+            text-decoration: none;
+            background: #333;
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+}
+
+
+@keyframes background {
+      0%, 100%{
+      background:linear-gradient(76.35deg, #FFFFFF 52.45%, rgba(196, 196, 196, 0) 52.49%), url(../images/back1.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    25%{
+      background:linear-gradient(76.35deg, #FFFFFF 52.45%, rgba(196, 196, 196, 0) 52.49%), url(../images/back2.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    50%{
+      background:linear-gradient(76.35deg, #FFFFFF 52.45%, rgba(196, 196, 196, 0) 52.49%), url(../images/back3.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }  
+     75%{
+      background:linear-gradient(76.35deg, #FFFFFF 52.45%, rgba(196, 196, 196, 0) 52.49%), url(../images/back4.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }  
+}
+
+//course section
+#course{
+  display: grid;
+  place-items: center;
+  min-height:100vh;
+  width:100vw;
+
+  .heading{
+      @include heading();
+      color: $green;
+  }
+
+  .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+
+    img{
+      height: 35%;
+      width: 35%;
+      transform: translateY(5rem);
+    }
+
+    p{
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+//media querries    
+@media (max-width:768px) {
+
+  html{
+    font-size: 50%;
+  }
+
+  #header {
+    .fa-bars {
+      display: block;
+    }
+
+    nav {
+      position: fixed;
+      top: -120%;
+      left: 0;
+      height: calc(100vh - 5rem);
+      width: 100vw;
+      background: #fff;
+
+      ul {
+        height: 100%;
+        flex-flow: column;
+        justify-content: center;
+
+        li {
+          margin: 2rem 0;
+
+          a {
+            font-size: 3rem;
+          }
+        }
+      }
+    }  // <-- this was missing
+
+    .nav-toggle {
+      top: 5.6rem;
+    }
+  }
+
+  #home{
+      animation:none;
+      background:linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,.08)), url(../images/back-md.jpg) no repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
+      .content{
+        text-shadow: .1rem .1rem .3rem #333;
+
+        .icons{
+          left:50%;
+          transform: translateX(-50%);
+        }
+      }
+  }
+}
+
+
